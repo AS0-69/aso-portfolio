@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ahmet-Selim Ozsoy | Étudiant BUT Informatique - Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio d'Ahmet-Selim Ozsoy, étudiant en BUT Informatique. Passionné par le développement et les nouvelles technologies."
+    />
+    <meta name="author" content="Ahmet-Selim Ozsoy" />
+    <meta property="og:title" content="Ahmet-Selim Ozsoy | Portfolio" />
+    <meta
+      property="og:description"
+      content="Étudiant en BUT Informatique passionné par les nouvelles technologies et l'innovation."
+    />
+    <meta property="og:type" content="website" />
+
+<link rel="icon" type="image/png" href="aso_logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-circles">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <nav>
+      <div class="nav-container">
+        <div class="logo">ASO</div>
+        <ul class="nav-links">
+          <li>
+            <a href="#accueil"><i class="fas fa-home"></i> Accueil</a>
+          </li>
+          <li>
+            <a href="#projets"><i class="fas fa-folder-open"></i> Projets</a>
+          </li>
+          <li>
+            <a href="#apropos"><i class="fas fa-user"></i> À propos</a>
+          </li>
+          <li>
+            <a href="#savoir-faire"><i class="fas fa-code"></i> Savoir-Faire</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="accueil">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Ahmet-Selim Ozsoy</h1>
+            <h2>Étudiant en BUT Informatique</h2>
+            <p>
+              Curieux et créatif, je façonne l'avenir numérique en transformant
+              des idées complexes en solutions logicielles innovantes et
+              performantes.
+            </p>
+            <a href="#contact" class="cta-btn"
+              ><i class="fas fa-paper-plane"></i> Me contacter</a
+            >
+          </div>
+          <div class="hero-image">
+            <div class="image-placeholder">
+              <img src="aso_logo.png" alt="Photo de profil ASO" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+
+        <div class="project-carousel-container">
+          <div class="project-carousel-track">
+            <div class="project-card">
+              <div class="project-image">
+                <img src="nexusflow.png" alt="Projet site vitrine" />
+              </div>
+              <div class="project-content">
+                <h3>
+                  Site vitrine pour une start-up de communication digitale
+                </h3>
+                <p>
+                  Conception d'un site web responsive pour une start-up
+                  spécialisée dans la production de vidéos publicitaires pour
+                  les réseaux sociaux. Le site inclut une galerie de portfolio
+                  et un formulaire de prise de contact.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Figma</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="lyonlumiere.png" alt="Projet Fête des Lumières" />
+              </div>
+              <div class="project-content">
+                <h3>Application de guidage – Fête des Lumières</h3>
+                <p>
+                  Application mobile reprenant le design de TCL (Agence des
+                  Mobilités), qui calcule un itinéraire optimisé entre les
+                  installations lumineuses à Lyon lors de la Fête des Lumières.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Swing</span>
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Leaflet.js</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="elevator.png" alt="Projet Ascenseur parking" />
+              </div>
+              <div class="project-content">
+                <h3>Ascenseur automatique pour parking miniature</h3>
+                <p>
+                  Prototype de parking automatisé (style japonais), piloté par
+                  une carte Arduino. Le système est géré via un site web dédié
+                  permettant de contrôler l'ascenseur et de visualiser les
+                  disponibilités en temps réel.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">C++</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-image">
+                <img src="lyoncentral.png" alt="Projet Lyon Central" />
+              </div>
+              <div class="project-content">
+                <h3>Lyon Central</h3>
+                <p>
+                  Jeu de gestion en ligne inspiré de "911 Operator". Le joueur
+                  gère l'envoi d'unités sur des incidents et tente d'obtenir le
+                  meilleur score. Le jeu intègre un système de comptes et un
+                  scoreboard global.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express.js</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Leaflet.js</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn prev" id="carouselPrev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next" id="carouselNext">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <div class="container">
+        <h2 class="section-title">À propos</h2>
+
+        <div class="bio-content">
+          <div class="bio-image">
+            <img src="coding_hand.png" alt="Illustration de code abstrait" />
+          </div>
+
+          <div class="bio-text">
+            <p>
+              Mon engagement envers l'informatique prend racine dans une
+              profonde fascination pour l'évolution humaine et l'histoire. L'ère
+              numérique actuelle étant l'étape la plus rapide de cette histoire,
+              j'ai naturellement voulu faire partie de ceux qui la construisent.
+              Cette démarche est née d'une simple curiosité d'enfant : celle de
+              comprendre, fondamentalement, "comment ça marche" ?
+            </p>
+            <p style="margin-top: 1rem">
+              Ce désir de maîtriser les mécanismes techniques s'est concrétisé
+              par un
+Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
+              BUT Informatique à l'IUT Lyon 1 Claude Bernard
+            </p>
+            <p style="margin-top: 1rem">
+              Actuellement en 2ᵉ année, je mets cette curiosité au service de la
+              conception d'applications, du développement web et de
+              l'administration réseau. Loin de considérer l'apprentissage comme
+              une simple étape, il est le moteur de ma progression. Je m'engage
+              à continuer d'apprendre et de m'adapter, faisant de chaque
+              technologie et de chaque projet une opportunité d'étendre mes
+              savoir-faire pour construire les solutions de demain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="savoir-faire">
+      <div class="container">
+        <h2 class="section-title">Mes Savoir-Faire</h2>
+
+        <h3 class="skills-subtitle">Technologies & Langages</h3>
+        <p class="skills-description">
+          Du développement web front-end au back-end, en passant par le logiciel
+          et les bases de données, voici les langages que je maîtrise.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>HTML / CSS / JavaScript</h3>
+            <p>Développement web moderne et responsive</p>
+          </div>
+          <div class="skill-card">
+            <h3>PHP</h3>
+            <p>Développement back-end et sites web dynamiques</p>
+          </div>
+          <div class="skill-card">
+            <h3>Python</h3>
+            <p>Programmation orientée objet et scripts</p>
+          </div>
+          <div class="skill-card">
+            <h3>Java</h3>
+            <p>Développement d'applications robustes</p>
+          </div>
+          <div class="skill-card">
+            <h3>C / C++ / C#</h3>
+            <p>Programmation logicielle et système</p>
+          </div>
+          <div class="skill-card">
+            <h3>SQL & PL/SQL</h3>
+            <p>Conception et gestion de bases de données relationnelles</p>
+          </div>
+        </div>
+
+        <h3 class="skills-subtitle">Outils & Méthodologies</h3>
+        <p class="skills-description">
+          Une bonne maîtrise des outils et des méthodes de travail est
+          essentielle pour garantir la qualité, la sécurité et la réussite d'un
+          projet.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Gestion de versions et travail collaboratif</p>
+          </div>
+          <div class="skill-card">
+            <h3>IDE & Éditeurs</h3>
+            <p>VS Code, Eclipse, IntelliJ, Visual Studio</p>
+          </div>
+          <div class="skill-card">
+            <h3>Réseaux & Protocoles</h3>
+            <p>TCP/IP, Cisco, Wireshark, DNS, HTTP</p>
+          </div>
+          <div class="skill-card">
+            <h3>Systèmes & Virtualisation</h3>
+            <p>Windows, Linux (Ubuntu), VMware</p>
+          </div>
+          <div class="skill-card">
+            <h3>Conception & Modélisation</h3>
+            <p>Diagrammes UML, Figma, Power BI</p>
+          </div>
+          <div class="skill-card">
+            <h3>Méthodes Agiles (SCRUM)</h3>
+            <p>Gestion de projet itérative et collaborative</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title light">Contact</h2>
+        <div class="contact-content">
+          <p style="font-size: 1.1rem; margin-bottom: 2rem">
+            N'hésitez pas à me contacter pour discuter de projets ou
+            d'opportunités.
+          </p>
+
+          <form
+            action="https://formspree.io/f/mqagpoae"
+            class="contact-form"
+            id="contactForm"
+            method="post"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Votre nom"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Votre email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                placeholder="Votre message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Envoyer
+            </button>
+            <div class="form-message" id="formMessage"></div>
+          </form>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:aso.helix69@gmail.com">aso.helix69@gmail.com</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/ahmet-selim-ozsoy-48b379350"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ahmet-Selim Ozsoy. Tous droits réservés.</p>
+      <p><i class="fas fa-envelope"></i> aso.helix69@gmail.com</p>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
