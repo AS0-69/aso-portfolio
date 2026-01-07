@@ -16,7 +16,7 @@
     />
     <meta property="og:type" content="website" />
 
-<link rel="icon" type="image/png" href="aso_logo.png" />
+<link rel="icon" type="image/png" href="images/aso_logo.png" />
 
     <link
       rel="stylesheet"
@@ -78,13 +78,18 @@
               des idées complexes en solutions logicielles innovantes et
               performantes.
             </p>
-            <a href="#contact" class="cta-btn"
-              ><i class="fas fa-paper-plane"></i> Me contacter</a
-            >
+            <div class="hero-buttons">
+              <a href="#projets" class="cta-btn"
+                ><i class="fas fa-folder-open"></i> Voir mes projets</a
+              >
+              <a href="#contact" class="cta-btn"
+                ><i class="fas fa-paper-plane"></i> Me contacter</a
+              >
+            </div>
           </div>
           <div class="hero-image">
             <div class="image-placeholder">
-              <img src="aso_logo.png" alt="Photo de profil ASO" />
+              <img src="images/aso_logo.png" alt="Photo de profil ASO" />
             </div>
           </div>
         </div>
@@ -95,104 +100,252 @@
       <div class="container">
         <h2 class="section-title">Mes Projets</h2>
 
-        <div class="project-carousel-container">
-          <div class="project-carousel-track">
-            <div class="project-card">
-              <div class="project-image">
-                <img src="nexusflow.png" alt="Projet site vitrine" />
-              </div>
-              <div class="project-content">
-                <h3>
-                  Site vitrine pour une start-up de communication digitale
-                </h3>
-                <p>
-                  Conception d'un site web responsive pour une start-up
-                  spécialisée dans la production de vidéos publicitaires pour
-                  les réseaux sociaux. Le site inclut une galerie de portfolio
-                  et un formulaire de prise de contact.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Figma</span>
-                </div>
-              </div>
-            </div>
+        <!-- Boutons de filtrage -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="tous">Tous</button>
+          <button class="filter-btn" data-filter="etudiant">Étudiant</button>
+          <button class="filter-btn" data-filter="personnel">Personnel</button>
+        </div>
 
-            <div class="project-card">
-              <div class="project-image">
-                <img src="lyonlumiere.png" alt="Projet Fête des Lumières" />
-              </div>
-              <div class="project-content">
-                <h3>Application de guidage – Fête des Lumières</h3>
-                <p>
-                  Application mobile reprenant le design de TCL (Agence des
-                  Mobilités), qui calcule un itinéraire optimisé entre les
-                  installations lumineuses à Lyon lors de la Fête des Lumières.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Swing</span>
-                  <span class="tech-tag">Java</span>
-                  <span class="tech-tag">Leaflet.js</span>
-                </div>
-              </div>
+        <!-- Grille des projets -->
+        <div class="projects-grid">
+          <!-- Projet 1 - Lyon Central -->
+          <div class="project-block" data-category="etudiant" data-project="0">
+            <div class="project-block-image">
+              <img src="images/lyoncentral1.png" alt="Lyon Central" />
             </div>
-
-            <div class="project-card">
-              <div class="project-image">
-                <img src="elevator.png" alt="Projet Ascenseur parking" />
+            <div class="project-block-content">
+              <h3>Lyon Central</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">JavaScript</span>
               </div>
-              <div class="project-content">
-                <h3>Ascenseur automatique pour parking miniature</h3>
-                <p>
-                  Prototype de parking automatisé (style japonais), piloté par
-                  une carte Arduino. Le système est géré via un site web dédié
-                  permettant de contrôler l'ascenseur et de visualiser les
-                  disponibilités en temps réel.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">C++</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-image">
-                <img src="lyoncentral.png" alt="Projet Lyon Central" />
-              </div>
-              <div class="project-content">
-                <h3>Lyon Central</h3>
-                <p>
-                  Jeu de gestion en ligne inspiré de "911 Operator". Le joueur
-                  gère l'envoi d'unités sur des incidents et tente d'obtenir le
-                  meilleur score. Le jeu intègre un système de comptes et un
-                  scoreboard global.
-                </p>
-                <div class="project-tech">
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Express.js</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Leaflet.js</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">HTML</span>
-                  <span class="tech-tag">CSS</span>
-                </div>
-              </div>
+              <button class="view-more-btn">Voir +</button>
             </div>
           </div>
-          <button class="carousel-btn prev" id="carouselPrev">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="carousel-btn next" id="carouselNext">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+
+          <!-- Projet 2 - Lyon Lumière -->
+          <div class="project-block" data-category="etudiant" data-project="1">
+            <div class="project-block-image">
+              <img src="images/lyonlumiere.png" alt="Lyon Lumière" />
+            </div>
+            <div class="project-block-content">
+              <h3>Application de guidage – Fête des Lumières</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Swing</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Leaflet.js</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 3 - Elevator -->
+          <div class="project-block" data-category="etudiant" data-project="2">
+            <div class="project-block-image">
+              <img src="images/elevator.png" alt="Elevator Parking" />
+            </div>
+            <div class="project-block-content">
+              <h3>Ascenseur automatique pour parking miniature</h3>
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 4 - Jeu d'Échecs -->
+          <div class="project-block" data-category="etudiant" data-project="3">
+            <div class="project-block-image chess-placeholder">
+              <i class="fas fa-chess chess-icon"></i>
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu d'Échecs en Python</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pygame</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 5 - Jeu 2048 -->
+          <div class="project-block" data-category="personnel" data-project="4">
+            <div class="project-block-image">
+              <img src="images/2048_1.png" alt="Jeu 2048" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu de puzzle 2048</h3>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 6 - Calculatrice -->
+          <div class="project-block" data-category="personnel" data-project="5">
+            <div class="project-block-image">
+              <img src="images/cal1.png" alt="Calculatrice" />
+            </div>
+            <div class="project-block-content">
+              <h3>Calculatrice en Java</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Java</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 7 - Jeu du Pendu -->
+          <div class="project-block" data-category="personnel" data-project="6">
+            <div class="project-block-image">
+              <img src="images/pednu1.png" alt="Jeu du Pendu" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu du Pendu en console</h3>
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 8 - Paint Simple -->
+          <div class="project-block" data-category="personnel" data-project="7">
+            <div class="project-block-image">
+              <img src="images/paint1.png" alt="Paint Simple" />
+            </div>
+            <div class="project-block-content">
+              <h3>Application de dessin simplifiée</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Tkinter</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 9 - NexusFlow -->
+          <div class="project-block" data-category="personnel" data-project="8">
+            <div class="project-block-image">
+              <img src="images/nexusflow.png" alt="NexusFlow" />
+            </div>
+            <div class="project-block-content">
+              <h3>Site vitrine pour une start-up de communication digitale</h3>
+              <div class="project-tech">
+                <span class="tech-tag">WordPress</span>
+                <span class="tech-tag">Figma</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 10 - Jeu de Plateforme -->
+          <div class="project-block" data-category="personnel" data-project="9">
+            <div class="project-block-image">
+              <img src="images/AP_1.png" alt="Jeu de Plateforme" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu de plateforme 2D</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pygame</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 11 - Snake -->
+          <div class="project-block" data-category="personnel" data-project="10">
+            <div class="project-block-image">
+              <img src="images/snake_1.png" alt="Snake" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu du Snake classique</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pygame</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 12 - Morpion -->
+          <div class="project-block" data-category="personnel" data-project="11">
+            <div class="project-block-image">
+              <img src="images/tictactoe_1.png" alt="Morpion" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu de Morpion (Tic-Tac-Toe)</h3>
+              <div class="project-tech">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">.NET</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
+
+          <!-- Projet 13 - La Famille en Or -->
+          <div class="project-block" data-category="personnel" data-project="12">
+            <div class="project-block-image">
+              <img src="images/feo1.png" alt="La Famille en Or" />
+            </div>
+            <div class="project-block-content">
+              <h3>Jeu La Famille en Or</h3>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+              <button class="view-more-btn">Voir +</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Modale pour les détails du projet -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <div class="modal-gallery">
+            <img id="modalImage" src="" alt="Projet" />
+            <div class="carousel-progress-container">
+              <div class="carousel-progress-bar" id="carouselProgress"></div>
+            </div>
+            <div class="gallery-controls">
+              <button class="gallery-btn prev" id="galleryPrev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <span class="gallery-counter" id="galleryCounter">1 / 1</span>
+              <button class="gallery-btn next" id="galleryNext">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-info">
+            <div class="modal-tech" id="modalTech"></div>
+            <h2 id="modalTitle">Titre du projet</h2>
+            <p class="modal-date" id="modalDate">Date : <span></span></p>
+            <div class="modal-description" id="modalDescription"></div>
+            <a href="#" class="modal-link-btn" id="modalLink" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Voir le site
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="apropos">
       <div class="container">
@@ -200,7 +353,7 @@
 
         <div class="bio-content">
           <div class="bio-image">
-            <img src="coding_hand.png" alt="Illustration de code abstrait" />
+            <img src="images/coding_hand.png" alt="Illustration de code abstrait" />
           </div>
 
           <div class="bio-text">
@@ -212,13 +365,13 @@
               Cette démarche est née d'une simple curiosité d'enfant : celle de
               comprendre, fondamentalement, "comment ça marche" ?
             </p>
-            <p style="margin-top: 1rem">
+            <p class="bio-paragraph">
               Ce désir de maîtriser les mécanismes techniques s'est concrétisé
               par un
 Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
               BUT Informatique à l'IUT Lyon 1 Claude Bernard
             </p>
-            <p style="margin-top: 1rem">
+            <p class="bio-paragraph">
               Actuellement en 2ᵉ année, je mets cette curiosité au service de la
               conception d'applications, du développement web et de
               l'administration réseau. Loin de considérer l'apprentissage comme
@@ -241,30 +394,66 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
           Du développement web front-end au back-end, en passant par le logiciel
           et les bases de données, voici les langages que je maîtrise.
         </p>
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>HTML / CSS / JavaScript</h3>
-            <p>Développement web moderne et responsive</p>
+        <div class="tech-icons-grid">
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+            <span>C</span>
           </div>
-          <div class="skill-card">
-            <h3>PHP</h3>
-            <p>Développement back-end et sites web dynamiques</p>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+            <span>C++</span>
           </div>
-          <div class="skill-card">
-            <h3>Python</h3>
-            <p>Programmation orientée objet et scripts</p>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+            <span>C#</span>
           </div>
-          <div class="skill-card">
-            <h3>Java</h3>
-            <p>Développement d'applications robustes</p>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-original.svg" alt="JSON" />
+            <span>JSON</span>
           </div>
-          <div class="skill-card">
-            <h3>C / C++ / C#</h3>
-            <p>Programmation logicielle et système</p>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+            <span>MySQL</span>
           </div>
-          <div class="skill-card">
-            <h3>SQL & PL/SQL</h3>
-            <p>Conception et gestion de bases de données relationnelles</p>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+            <span>Python</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+            <span>HTML</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+            <span>CSS</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+            <span>Node.js</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+            <span>Java</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+            <span>PHP</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+            <span>Git</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL" />
+            <span>SQL</span>
+          </div>
+          <div class="tech-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" alt="PL/SQL" />
+            <span>PL/SQL</span>
           </div>
         </div>
 
@@ -307,7 +496,7 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
       <div class="container">
         <h2 class="section-title light">Contact</h2>
         <div class="contact-content">
-          <p style="font-size: 1.1rem; margin-bottom: 2rem">
+          <p class="contact-intro">
             N'hésitez pas à me contacter pour discuter de projets ou
             d'opportunités.
           </p>
@@ -365,6 +554,13 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
             >
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
+            <a
+              href="https://github.com/AS0-69"
+              target="_blank"
+              class="social-btn"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
             </div>
         </div>
       </div>
@@ -373,11 +569,54 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
     <footer>
       <p>&copy; 2025 Ahmet-Selim Ozsoy. Tous droits réservés.</p>
       <p><i class="fas fa-envelope"></i> aselim6970@gmail.com</p>
+      <p><a href="#" id="mentionsLegalesLink" class="mentions-link">Mentions légales</a></p>
     </footer>
 
     <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
       <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Modale Mentions Légales -->
+    <div class="mentions-modal" id="mentionsModal">
+      <div class="modal-overlay"></div>
+      <div class="mentions-content">
+        <button class="modal-close" id="mentionsClose">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="mentions-body">
+          <h2>Mentions légales</h2>
+          
+          <h3>Éditeur du site</h3>
+          <p>Ce site est édité par : <strong>Ahmet-Selim Ozsoy</strong></p>
+          <p>Statut : Particulier / Étudiant</p>
+          <p>Contact : <a href="mailto:aselim6970@gmail.com">aselim6970@gmail.com</a></p>
+          
+          <h3>Hébergement</h3>
+          <p>Ce site est hébergé par :</p>
+          <p><strong>Vercel Inc.</strong><br>
+          340 S Lemon Ave #4133, Walnut, CA 91789 – États-Unis<br>
+          Site : <a href="https://vercel.com" target="_blank">vercel.com</a></p>
+          <p>Code source hébergé sur <strong>GitHub</strong><br>
+          GitHub, Inc.<br>
+          88 Colin P Kelly Jr Street, San Francisco, CA 94107 – États-Unis<br>
+          Site : <a href="https://github.com" target="_blank">github.com</a></p>
+          
+          <h3>Responsable de la publication</h3>
+          <p>Responsable de la publication : <strong>Ahmet-Selim Ozsoy</strong></p>
+          
+          <h3>Propriété intellectuelle</h3>
+          <p>L'ensemble des contenus (textes, images, graphismes, code source, etc.) présents sur ce site sont, sauf mention contraire, la propriété exclusive d'Ahmet-Selim Ozsoy. Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, est interdite sans autorisation préalable.</p>
+          
+          <h3>Cookies & Données personnelles</h3>
+          <p>Ce site ne collecte pas de données personnelles et n'utilise pas de cookies à des fins de suivi ou de publicité.</p>
+          <p>Seuls les échanges via le formulaire de contact peuvent générer un envoi d'e-mail à des fins de prise de contact.</p>
+          
+          <h3>Crédits</h3>
+          <p>Design et développement : <strong>Ahmet-Selim Ozsoy</strong></p>
+          <p>Technologies utilisées : HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
