@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de développer mes compétences en architecture logicielle et en travail d'équipe.`,
             images: ['images/lyoncentral1.png', 'images/lyoncentral2.png', 'images/lyoncentral3.png', 'images/lyoncentral4.png', 'images/lyoncentral5.png', 'images/lyoncentral6.png', 'images/lyoncentral7.png'],
             tech: ['Node.js', 'Express.js', 'JavaScript', 'Leaflet.js', 'PHP'],
-            link: 'https://lyoncentral.bouaouina.com'
+            site: 'https://lyoncentral.bouaouina.com'
         },
         {
             title: 'Application de guidage – Fête des Lumières',
@@ -238,7 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de perfectionner mes compétences en JavaScript et en gestion d'état d'application.`,
             images: ['images/2048_1.png', 'images/2048_2.png', 'images/2048_3.png', 'images/2048_4.png'],
             tech: ['HTML', 'JavaScript', 'CSS'],
-            link: 'https://github.com/votre-username/2048'
+            github: 'https://github.com/AS0-69/2048',
+            site: 'https://2048-aso.vercel.app'
         },
         {
             title: 'Calculatrice en Java',
@@ -255,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de pratiquer la programmation orientée objet en Java et de créer une interface utilisateur fonctionnelle.`,
             images: ['images/cal1.png', 'images/cal2.png', 'images/cal3.png'],
             tech: ['Java'],
-            link: 'https://github.com/votre-username/calculatrice'
+            github: 'https://github.com/AS0-69/calculatrice'
         },
         {
             title: 'Jeu du Pendu en console',
@@ -273,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de renforcer mes bases en C++ et en gestion de la logique de jeu.`,
             images: ['images/pednu1.png', 'images/pednu2.png', 'images/pednu3.png'],
             tech: ['C++'],
-            link: 'https://github.com/votre-username/pendu'
+            github: 'https://github.com/AS0-69/jeu-du-pendu'
         },
         {
             title: 'Application de dessin simplifiée',
@@ -291,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de découvrir Tkinter et la gestion d'événements graphiques en Python.`,
             images: ['images/paint1.png', 'images/paint2.png', 'images/paint3.png'],
             tech: ['Python', 'Tkinter'],
-            link: 'https://github.com/votre-username/paint-simple'
+            github: 'https://github.com/AS0-69/jeu-de-dessin-paint'
         },
         {
             title: 'Site vitrine pour une start-up de communication digitale',
@@ -309,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis d'approfondir mes compétences en conception UI/UX avec Figma et en développement WordPress.`,
             images: ['images/nexusflow.png'],
             tech: ['WordPress', 'Figma'],
-            link: 'https://agence-nexusflow.com'
+            site: 'https://agence-nexusflow.com'
         },
         {
             title: 'Jeu de plateforme 2D',
@@ -327,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis d'approfondir mes connaissances en développement de jeux vidéo et en gestion de la physique 2D.`,
             images: ['images/AP_1.png', 'images/AP_2.png', 'images/AP_3.png', 'images/AP_4.png', 'images/AP_5.png', 'images/AP_6.png'],
             tech: ['Python', 'Pygame'],
-            link: 'https://github.com/votre-username/plateforme'
+            github: 'https://github.com/AS0-69/aventure-plateforme'
         },
         {
             title: 'Jeu du Snake classique',
@@ -345,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet a été ma première incursion dans le développement de jeux avec Python et Pygame.`,
             images: ['images/snake_1.png', 'images/snake_2.png', 'images/snake_3.png', 'images/snake_4.png'],
             tech: ['Python', 'Pygame'],
-            link: 'https://github.com/votre-username/snake'
+            github: 'https://github.com/AS0-69/snake'
         },
         {
             title: 'Jeu de Morpion (Tic-Tac-Toe)',
@@ -363,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
             Ce projet m'a permis de découvrir C# et le framework .NET pour le développement d'applications Windows.`,
             images: ['images/tictactoe_1.png', 'images/tictactoe_2.png', 'images/tictactoe_3.png'],
             tech: ['C#', '.NET'],
-            link: 'https://github.com/votre-username/morpion'
+            github: 'https://github.com/AS0-69/morpion'
         },
         {
             title: 'Jeu La Famille en Or',
@@ -383,7 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
             Projet commandé par le CIMG pour rassembler la communauté autour d'une activité ludique et conviviale.`,
             images: ['images/feo1.png', 'images/feo2.png', 'images/feo3.png'],
             tech: ['HTML', 'CSS', 'JavaScript'],
-            link: 'https://famille-en-or.vercel.app/'
+            github: 'https://github.com/AS0-69/famille-en-or',
+            site: 'https://famille-en-or.vercel.app'
         }
     ];
 
@@ -418,7 +420,24 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('modalTitle').textContent = project.title;
             document.getElementById('modalDate').querySelector('span').textContent = project.date;
             document.getElementById('modalDescription').innerHTML = project.description.replace(/\n/g, '<br><br>');
-            document.getElementById('modalLink').href = project.link;
+            
+            // Gérer les liens (GitHub et Site)
+            const githubLink = document.getElementById('modalGithubLink');
+            const siteLink = document.getElementById('modalSiteLink');
+            
+            if (project.github) {
+                githubLink.href = project.github;
+                githubLink.style.display = 'inline-flex';
+            } else {
+                githubLink.style.display = 'none';
+            }
+            
+            if (project.site) {
+                siteLink.href = project.site;
+                siteLink.style.display = 'inline-flex';
+            } else {
+                siteLink.style.display = 'none';
+            }
             
             // Remplir les technologies
             const modalTech = document.getElementById('modalTech');

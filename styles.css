@@ -935,6 +935,12 @@ section::before {
     flex-grow: 1;
 }
 
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .modal-link-btn {
     display: inline-flex;
     align-items: center;
@@ -947,7 +953,20 @@ section::before {
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
-    align-self: flex-start;
+}
+
+.modal-link-btn.github-btn {
+    background: #24292e;
+}
+
+.modal-link-btn.github-btn:hover {
+    background: #1b1f23;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(36, 41, 46, 0.4);
+}
+
+.modal-link-btn.site-btn {
+    background: var(--primary);
 }
 
 .modal-link-btn:hover {
