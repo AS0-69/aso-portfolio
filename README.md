@@ -135,22 +135,15 @@ Le portfolio peut être facilement personnalisé en modifiant :
 
 ## 🌐 Déploiement
 
-Ce portfolio peut être déployé gratuitement sur :
+✨ **Le portfolio est actuellement en ligne !**
 
-- **GitHub Pages** (Recommandé)
-  ```bash
-  # Dans les paramètres du repo GitHub
-  Settings > Pages > Source: main branch
-  ```
+🔗 **Visitez le site : [https://www.ahmetselimozsoy.dev/](https://www.ahmetselimozsoy.dev/)**
 
-- **Netlify**
-  - Glissez-déposez le dossier sur netlify.com
-
-- **Vercel**
-  - Importez le projet depuis GitHub
-
-- **000webhost** / **InfinityFree**
-  - Hébergement gratuit traditionnel
+Le site est hébergé et déployé automatiquement sur **Vercel** avec :
+- ⚡ Déploiement instantané à chaque push
+- 🌍 CDN global pour une performance optimale
+- 🔒 HTTPS automatique
+- 🚀 Temps de chargement ultra-rapide
 
 ## 📱 Compatibilité
 
@@ -174,17 +167,6 @@ Ce portfolio peut être déployé gratuitement sur :
 - **Performance** : 90+ sur Lighthouse
 - **Responsive** : 100% mobile-friendly
 - **Accessibilité** : AAA WCAG
-
-## 🚧 Améliorations Futures
-
-- [ ] Mode sombre / Mode clair
-- [ ] Version multilingue (FR/EN)
-- [ ] Blog intégré
-- [ ] Système de téléchargement CV
-- [ ] Analytics pour suivre les visites
-- [ ] Formulaire de contact backend
-- [ ] Galerie de photos/vidéos
-- [ ] Section témoignages
 
 ## 🤝 Contribution
 
