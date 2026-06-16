@@ -1036,7 +1036,7 @@ section::before {
         justify-content: center;
     }
 }
-}
+
 
 /* ============================================= */
 /* Section Contact                               */
@@ -1640,4 +1640,67 @@ footer p {
         flex-direction: column;
         gap: 0.5rem;
     }
+}
+
+
+/* ============================================= */
+/* Ajouts pour la section Compétences BUT        */
+/* ============================================= */
+
+.skills-description { 
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-size: 1.1rem; 
+}
+
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+}
+
+.skill-card { 
+    background-color: var(--card-bg); 
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s; 
+    border-top: 4px solid var(--primary); 
+}
+
+.skill-card:hover { 
+    transform: translateY(-5px); 
+}
+
+.skill-card h3 { 
+    color: var(--primary); 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.competence-link { 
+    margin-top: 15px; 
+    padding-top: 15px; 
+    border-top: 1px dashed var(--gray); 
+    font-size: 0.95rem; 
+}
+
+.competence-link strong { 
+    color: var(--primary-dark); 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+/* Badge Niveau Compétences BUT */
+.level-tag {
+    display: inline-block;
+    background-color: #10b981; /* Vert positif */
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 12px;
 }

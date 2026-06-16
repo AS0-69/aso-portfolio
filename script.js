@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Applique l'observateur uniquement aux cartes de compétences
     document.querySelectorAll('.skill-card').forEach(card => {
         observer.observe(card);
     });
@@ -110,13 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ============================================= */
-    /* Gestion du Formulaire de Contact (via Formspree) */
-    /* Le formulaire HTML est géré par l'action "formspree.io", aucun JS n'est requis. */
-    /* ============================================= */
-    
-    // (Aucun JavaScript n'est nécessaire ici car Formspree gère la soumission)
-
-    /* ============================================= */
     /* Système de filtrage des projets              */
     /* ============================================= */
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -125,14 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (filterButtons.length > 0 && projectBlocks.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Retirer la classe active de tous les boutons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Ajouter la classe active au bouton cliqué
                 button.classList.add('active');
 
                 const filter = button.getAttribute('data-filter');
 
-                // Filtrer les projets
                 projectBlocks.forEach(block => {
                     const category = block.getAttribute('data-category');
                     
@@ -148,23 +137,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ============================================= */
-    /* Système de Modale pour les projets            */
+    /* Stockage ordonné des données de Projets      */
     /* ============================================= */
     const projectsData = [
         {
+            title: 'Automatisation NetDevOps & Refonte Documentaire',
+            date: 'Avril 2026 - Août 2026',
+            description: `Stage de 16 semaines au sein de la direction DIGIT d'EDF (Équipe Interconnexions). Mon travail s'est divisé en deux missions majeures :<br><br>
+            <strong>Mission 1 : Conception d'une solution d'automatisation réseau (NetDevOps)</strong><br>
+            - Développement d'un script Python sécurisé pour automatiser les bascules de flux des routeurs Arista lors des maintenances mensuelles.<br>
+            - Interfaçage avec l'eAPI Arista, Nautobot (Source de Vérité) et le framework Nornir.<br>
+            - Intégration logicielle sur le portail interne NAP (Django) avec développement d'un front-end dynamique en JavaScript.<br><br>
+            <strong>Mission 2 : Audit et Refonte Documentaire (Méthodologie Agile)</strong><br>
+            - Audit de l'existant auprès des Product Owners (POs).<br>
+            - Restructuration complète de l'espace de connaissances Confluence pour les 8 services de l'équipe.<br><br>`,
+            images: [
+                'images/edf-stage.png'
+            ],
+            tech: ['Python', 'Nornir', 'Django', 'Nautobot', 'JavaScript', 'Confluence', 'Jira']
+        },
+        {
             title: 'Lyon Central',
             date: 'Septembre 2025',
-            description: `Jeu de gestion en ligne inspiré de "911 Operator", développé dans le cadre d'un projet universitaire de groupe.
-            
-            Fonctionnalités du jeu :
-            - Gestion en temps réel des interventions d'urgence
-            - Système de comptes utilisateurs avec authentification sécurisée
-            - Scoreboard global avec classement des joueurs
-            - Carte interactive de Lyon avec Leaflet.js
-            - Architecture client-serveur avec Node.js et Express
-            - Base de données pour la persistance des scores
-            
-            Ce projet m'a permis de développer mes compétences en architecture logicielle et en travail d'équipe.`,
+            description: `<strong>SAÉ - Projet universitaire.</strong><br>Jeu de gestion en ligne inspiré de "911 Operator", développé dans le cadre d'un projet universitaire de groupe.<br><br>
+            Fonctionnalités du jeu :<br>
+            - Gestion en temps réel des interventions d'urgence<br>
+            - Système de comptes utilisateurs avec authentification sécurisée<br>
+            - Scoreboard global avec classement des joueurs<br>
+            - Carte interactive de Lyon avec Leaflet.js<br>
+            - Architecture client-serveur avec Node.js et Express<br>
+            - Base de données pour la persistance des scores`,
             images: ['images/lyoncentral1.png', 'images/lyoncentral2.png', 'images/lyoncentral3.png', 'images/lyoncentral4.png', 'images/lyoncentral5.png', 'images/lyoncentral6.png', 'images/lyoncentral7.png'],
             tech: ['Node.js', 'Express.js', 'JavaScript', 'Leaflet.js', 'PHP'],
             site: 'https://lyoncentral.bouaouina.com'
@@ -172,16 +174,13 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Application de guidage – Fête des Lumières',
             date: 'Février 2025',
-            description: `Application mobile développée dans le cadre d'un projet universitaire, reprenant le design de TCL (Agence des Mobilités de Lyon).
-            
-            Fonctionnalités principales :
-            - Calcul d'itinéraire optimisé entre les installations lumineuses
-            - Intégration de cartes interactives avec Leaflet.js
-            - Interface intuitive inspirée du design system de TCL
-            - Gestion des données de localisation en temps réel
-            - Mode hors-ligne pour économiser la batterie
-            
-            Ce projet m'a permis de développer mes compétences en développement d'applications mobiles et en intégration de cartographie interactive.`,
+            description: `<strong>SAÉ - Projet universitaire.</strong><br>Application mobile développée dans le cadre d'un projet universitaire, reprenant le design de TCL (Agence des Mobilités de Lyon).<br><br>
+            Fonctionnalités principales :<br>
+            - Calcul d'itinéraire optimisé entre les installations lumineuses<br>
+            - Intégration de cartes interactives avec Leaflet.js<br>
+            - Interface intuitive inspirée du design system de TCL<br>
+            - Gestion des données de localisation en temps réel<br>
+            - Mode hors-ligne pour économiser la batterie`,
             images: ['images/lyonlumiere.png'],
             tech: ['Swing', 'Java', 'Leaflet.js'],
             link: 'https://github.com/votre-username/lyon-lumiere'
@@ -189,16 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Ascenseur automatique pour parking miniature',
             date: 'Mars 2024',
-            description: `Prototype de parking automatisé de style japonais, piloté par une carte Arduino. Projet universitaire combinant électronique et développement web.
-            
-            Caractéristiques du système :
-            - Contrôle automatisé via Arduino pour la gestion de l'ascenseur
-            - Interface web de contrôle et monitoring en temps réel
-            - Visualisation des places disponibles avec mise à jour dynamique
-            - Système de capteurs pour la détection des véhicules
-            - Protocole de communication série entre Arduino et serveur web
-            
-            Ce projet m'a permis d'explorer l'IoT et la communication entre hardware et software.`,
+            description: `<strong>SAÉ - Projet de lycée.</strong><br>Prototype de parking automatisé de style japonais, piloté par une carte Arduino. Projet universitaire combinant électronique et développement web.<br><br>
+            Caractéristiques du système :<br>
+            - Contrôle automatisé via Arduino pour la gestion de l'ascenseur<br>
+            - Interface web de contrôle et monitoring en temps réel<br>
+            - Visualisation des places disponibles avec mise à jour dynamique<br>
+            - Système de capteurs pour la détection des véhicules<br>
+            - Protocole de communication série entre Arduino et serveur web`,
             images: ['images/elevator.png', 'images/elevator2.png'],
             tech: ['C++', 'PHP', 'HTML', 'CSS'],
             link: 'https://github.com/votre-username/elevator-parking'
@@ -206,18 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu d\'Échecs en Python',
             date: 'Novembre 2025',
-            description: `Projet universitaire de jeu d'échecs complet développé en Python avec Pygame, respectant toutes les règles officielles du jeu.
-            
-            Fonctionnalités :
-            - Interface graphique 2D avec plateau et pièces visuels
-            - Implémentation complète des règles d'échecs (déplacements, prises, échec et mat)
-            - Mouvements spéciaux : roque, prise en passant, promotion du pion
-            - Détection des situations d'échec, échec et mat, et pat
-            - Indicateurs visuels pour les coups possibles
-            - Mode 2 joueurs en local
-            - Historique des coups joués
-            
-            Ce projet académique m'a permis d'approfondir mes compétences en programmation orientée objet et en gestion de logique de jeu complexe.`,
+            description: `<strong>SAÉ - Projet universitaire.</strong><br>Jeu d'échecs complet développé en Python avec Pygame, respectant toutes les règles officielles du jeu.<br><br>
+            Fonctionnalités :<br>
+            - Interface graphique 2D avec plateau et pièces visuels<br>
+            - Implémentation complète des règles d'échecs (déplacements, prises, échec et mat)<br>
+            - Mouvements spéciaux : roque, prise en passant, promotion du pion<br>
+            - Détection des situations d'échec, échec et mat, et pat<br>
+            - Indicateurs visuels pour les coups possibles`,
             images: [],
             tech: ['Python', 'Pygame'],
             link: 'https://github.com/votre-username/echecs'
@@ -225,17 +216,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu de puzzle 2048',
             date: 'Août 2025',
-            description: `Implémentation moderne du célèbre jeu 2048, un puzzle addictif où le joueur doit combiner des tuiles pour atteindre la tuile 2048.
-            
-            Fonctionnalités :
-            - Interface utilisateur responsive et intuitive
-            - Système de score avec sauvegarde locale (LocalStorage)
-            - Animations fluides lors des déplacements de tuiles
-            - Détection automatique de fin de partie
-            - Possibilité de recommencer à tout moment
-            - Design moderne avec des couleurs adaptatives
-            
-            Ce projet m'a permis de perfectionner mes compétences en JavaScript et en gestion d'état d'application.`,
+            description: `Implémentation moderne du célèbre jeu 2048, un puzzle addictif où le joueur doit combiner des tuiles pour atteindre la tuile 2048.<br><br>
+            Fonctionnalités :<br>
+            - Interface utilisateur responsive et intuitive<br>
+            - Système de score avec sauvegarde locale (LocalStorage)<br>
+            - Animations fluides lors des déplacements de tuiles`,
             images: ['images/2048_1.png', 'images/2048_2.png', 'images/2048_3.png', 'images/2048_4.png'],
             tech: ['HTML', 'JavaScript', 'CSS'],
             github: 'https://github.com/AS0-69/2048',
@@ -244,16 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Calculatrice en Java',
             date: 'Mai 2025',
-            description: `Application de calculatrice simple développée en Java, permettant d'effectuer les opérations arithmétiques de base.
-            
-            Fonctionnalités :
-            - Interface graphique claire et ergonomique
-            - Opérations de base : addition, soustraction, multiplication, division
-            - Gestion des nombres décimaux
-            - Historique des calculs
-            - Gestion des erreurs (division par zéro, etc.)
-            
-            Ce projet m'a permis de pratiquer la programmation orientée objet en Java et de créer une interface utilisateur fonctionnelle.`,
+            description: `Application de calculatrice simple développée en Java, permettant d'effectuer les opérations arithmétiques de base.`,
             images: ['images/cal1.png', 'images/cal2.png', 'images/cal3.png'],
             tech: ['Java'],
             github: 'https://github.com/AS0-69/calculatrice'
@@ -261,17 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu du Pendu en console',
             date: 'Décembre 2023',
-            description: `Implémentation classique du jeu du Pendu en C++, jouable dans le terminal.
-            
-            Fonctionnalités :
-            - Liste de mots aléatoires tirés d'un dictionnaire
-            - Affichage visuel du pendu en ASCII art
-            - Compteur de tentatives restantes
-            - Système de score et de statistiques
-            - Gestion des lettres déjà proposées
-            - Difficulté ajustable
-            
-            Ce projet m'a permis de renforcer mes bases en C++ et en gestion de la logique de jeu.`,
+            description: `Implémentation classique du jeu du Pendu en C++, jouable dans le terminal.`,
             images: ['images/pednu1.png', 'images/pednu2.png', 'images/pednu3.png'],
             tech: ['C++'],
             github: 'https://github.com/AS0-69/jeu-du-pendu'
@@ -279,17 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Application de dessin simplifiée',
             date: 'Juillet 2025',
-            description: `Clone simplifié de Microsoft Paint développé en Python avec Tkinter, permettant de dessiner librement.
-            
-            Fonctionnalités :
-            - Outils de dessin : crayon, pinceau, ligne, rectangle, cercle
-            - Palette de couleurs personnalisable
-            - Réglage de l'épaisseur du trait
-            - Gomme pour effacer
-            - Sauvegarde et chargement d'images
-            - Interface intuitive et facile d'utilisation
-            
-            Ce projet m'a permis de découvrir Tkinter et la gestion d'événements graphiques en Python.`,
+            description: `Clone simplifié de Microsoft Paint développé en Python avec Tkinter, permettant de dessiner librement.`,
             images: ['images/paint1.png', 'images/paint2.png', 'images/paint3.png'],
             tech: ['Python', 'Tkinter'],
             github: 'https://github.com/AS0-69/jeu-de-dessin-paint'
@@ -297,17 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Site vitrine pour une start-up de communication digitale',
             date: 'Juin 2025',
-            description: `Projet universitaire réalisé dans le cadre de ma formation, NexusFlow est une plateforme conçue pour une start-up spécialisée dans la production de vidéos publicitaires pour les réseaux sociaux.
-            
-            Spécifications techniques :
-            - Maquettage complet du site sur Figma avec prototype interactif
-            - Développement du site sous WordPress avec personnalisation du thème
-            - Design moderne et responsive adapté à tous les supports
-            - Galerie de portfolio interactive avec filtres dynamiques
-            - Formulaire de contact intégré
-            - Optimisation SEO et des performances
-            
-            Ce projet m'a permis d'approfondir mes compétences en conception UI/UX avec Figma et en développement WordPress.`,
+            description: `Réalisé dans le cadre d'une formation, NexusFlow est une plateforme conçue pour une start-up spécialisée dans la production de vidéos publicitaires pour les réseaux sociaux.`,
             images: ['images/nexusflow.png'],
             tech: ['WordPress', 'Figma'],
             site: 'https://agence-nexusflow.com'
@@ -315,17 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu de plateforme 2D',
             date: 'Décembre 2025',
-            description: `Jeu de plateforme 2D développé avec Pygame, où le joueur doit traverser différents niveaux en évitant des obstacles.
-            
-            Fonctionnalités :
-            - Physique réaliste avec gravité et collisions
-            - Plusieurs niveaux avec difficulté progressive
-            - Système de vies et de points
-            - Ennemis avec patterns de déplacement
-            - Power-ups et bonus collectables
-            - Musique et effets sonores
-            
-            Ce projet m'a permis d'approfondir mes connaissances en développement de jeux vidéo et en gestion de la physique 2D.`,
+            description: `Jeu de plateforme 2D développé avec Pygame, où le joueur doit traverser différents niveaux en évitant des obstacles.`,
             images: ['images/AP_1.png', 'images/AP_2.png', 'images/AP_3.png', 'images/AP_4.png', 'images/AP_5.png', 'images/AP_6.png'],
             tech: ['Python', 'Pygame'],
             github: 'https://github.com/AS0-69/aventure-plateforme'
@@ -333,17 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu du Snake classique',
             date: 'Juillet 2025',
-            description: `Réimplémentation du jeu classique Snake avec Pygame, où le serpent grandit en mangeant de la nourriture.
-            
-            Fonctionnalités :
-            - Contrôles fluides au clavier (flèches directionnelles)
-            - Vitesse progressive augmentant avec le score
-            - Système de high score avec sauvegarde
-            - Détection de collision avec les murs et le corps
-            - Design rétro fidèle au jeu original
-            - Mode pause
-            
-            Ce projet a été ma première incursion dans le développement de jeux avec Python et Pygame.`,
+            description: `Réimplémentation du jeu classique Snake avec Pygame, où le serpent grandit en mangeant de la nourriture.`,
             images: ['images/snake_1.png', 'images/snake_2.png', 'images/snake_3.png', 'images/snake_4.png'],
             tech: ['Python', 'Pygame'],
             github: 'https://github.com/AS0-69/snake'
@@ -351,17 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu de Morpion (Tic-Tac-Toe)',
             date: 'Juillet 2025',
-            description: `Jeu de Morpion développé en C# avec une interface graphique Windows Forms.
-            
-            Fonctionnalités :
-            - Mode 2 joueurs en local
-            - Interface graphique intuitive et réactive
-            - Détection automatique de victoire ou match nul
-            - Compteur de scores pour plusieurs parties
-            - Animations visuelles lors de la victoire
-            - Possibilité de recommencer rapidement
-            
-            Ce projet m'a permis de découvrir C# et le framework .NET pour le développement d'applications Windows.`,
+            description: `Jeu de Morpion développé en C# avec une interface graphique Windows Forms.`,
             images: ['images/tictactoe_1.png', 'images/tictactoe_2.png', 'images/tictactoe_3.png'],
             tech: ['C#', '.NET'],
             github: 'https://github.com/AS0-69/morpion'
@@ -369,19 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             title: 'Jeu La Famille en Or',
             date: 'Décembre 2025',
-            description: `Reproduction interactive du célèbre jeu télévisé "La Famille en Or", développée pour la CIMG Mosquée Bleue de Villefranche-sur-Saône afin d'animer des événements communautaires.
-            
-            Fonctionnalités :
-            - Système de questions avec réponses multiples et scores
-            - Mode solo ou mode équipe configurable
-            - Compteur d'erreurs personnalisable (1 à illimité)
-            - Système d'indices optionnel pour aider les joueurs
-            - Plusieurs catégories de questions thématiques
-            - Animations et effets sonores pour une expérience immersive
-            - Interface fidèle au jeu télévisé avec tableau de scores
-            - Gestion des manches et calcul automatique des points
-            
-            Projet commandé par le CIMG pour rassembler la communauté autour d'une activité ludique et conviviale.`,
+            description: `Reproduction interactive du célèbre jeu télévisé "La Famille en Or", développée pour la CIMG Mosquée Bleue de Villefranche-sur-Saône afin d'animer des événements communautaires.`,
             images: ['images/feo1.png', 'images/feo2.png', 'images/feo3.png'],
             tech: ['HTML', 'CSS', 'JavaScript'],
             github: 'https://github.com/AS0-69/famille-en-or',
@@ -389,6 +293,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    /* ============================================= */
+    /* Système de Modale pour les projets            */
+    /* ============================================= */
     const modal = document.getElementById('projectModal');
     const modalClose = document.getElementById('modalClose');
     const modalOverlay = document.querySelector('.modal-overlay');
@@ -401,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let progressValue = 0;
 
     if (modal && viewMoreButtons.length > 0) {
-        viewMoreButtons.forEach((button, index) => {
+        viewMoreButtons.forEach((button) => {
             button.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const projectBlock = button.closest('.project-block');
@@ -410,18 +317,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Fonction pour ouvrir la modale
         function openModal(projectId) {
             currentProjectId = projectId;
             currentImageIndex = 0;
             const project = projectsData[projectId];
             
-            // Remplir les informations
             document.getElementById('modalTitle').textContent = project.title;
             document.getElementById('modalDate').querySelector('span').textContent = project.date;
-            document.getElementById('modalDescription').innerHTML = project.description.replace(/\n/g, '<br><br>');
+            document.getElementById('modalDescription').innerHTML = project.description;
             
-            // Gérer les liens (GitHub et Site)
             const githubLink = document.getElementById('modalGithubLink');
             const siteLink = document.getElementById('modalSiteLink');
             
@@ -439,7 +343,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 siteLink.style.display = 'none';
             }
             
-            // Remplir les technologies
             const modalTech = document.getElementById('modalTech');
             modalTech.innerHTML = '';
             project.tech.forEach(tech => {
@@ -449,27 +352,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalTech.appendChild(tag);
             });
             
-            // Afficher la première image
             updateGalleryImage();
-            
-            // Démarrer le carousel automatique
             startCarousel();
             
-            // Afficher la modale
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
-        // Fonction pour mettre à jour l'image de la galerie
         function updateGalleryImage() {
             const project = projectsData[currentProjectId];
             const modalImage = document.getElementById('modalImage');
             const galleryCounter = document.getElementById('galleryCounter');
             const modalGallery = document.querySelector('.modal-gallery');
             
-            // Vérifier si le projet a des images
             if (project.images && project.images.length > 0) {
-                // Retirer l'animation puis la réappliquer pour la relancer
                 modalImage.style.animation = 'none';
                 modalImage.style.display = 'block';
                 modalGallery.classList.remove('no-image');
@@ -480,27 +376,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 galleryCounter.textContent = `${currentImageIndex + 1} / ${project.images.length}`;
             } else {
-                // Pas d'image - afficher un placeholder
                 modalImage.style.display = 'none';
                 modalGallery.classList.add('no-image');
                 galleryCounter.textContent = 'Pas d\'images disponibles';
             }
         }
 
-        // Fonction pour démarrer le carousel automatique
         function startCarousel() {
-            // Arrêter les intervalles existants
             stopCarousel();
-            
-            // Réinitialiser et démarrer la barre de progression
             resetProgressBar();
             
-            // Durée totale : 5 secondes pour un meilleur timing
-            const totalDuration = 5000; // 5 secondes
-            const updateInterval = 50; // Mise à jour toutes les 50ms
+            const totalDuration = 5000;
+            const updateInterval = 50;
             const progressStep = 100 / (totalDuration / updateInterval);
             
-            // Animer la barre de progression
             progressInterval = setInterval(() => {
                 progressValue += progressStep;
                 if (progressValue >= 100) {
@@ -509,19 +398,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateProgressBar();
             }, updateInterval);
             
-            // Démarrer un nouveau carousel avec la même durée
             carouselInterval = setInterval(() => {
                 nextImage();
             }, totalDuration);
         }
 
-        // Fonction pour réinitialiser la barre de progression
         function resetProgressBar() {
             progressValue = 0;
             updateProgressBar();
         }
 
-        // Fonction pour mettre à jour la barre de progression
         function updateProgressBar() {
             const progressBar = document.getElementById('carouselProgress');
             if (progressBar) {
@@ -529,7 +415,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Fonction pour arrêter le carousel
         function stopCarousel() {
             if (carouselInterval) {
                 clearInterval(carouselInterval);
@@ -541,52 +426,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Fonction pour l'image suivante
         function nextImage() {
             const project = projectsData[currentProjectId];
-            currentImageIndex = (currentImageIndex + 1) % project.images.length;
-            updateGalleryImage();
-            // Redémarrer le carousel et la barre de progression
-            startCarousel();
+            if(project.images && project.images.length > 0) {
+                currentImageIndex = (currentImageIndex + 1) % project.images.length;
+                updateGalleryImage();
+                startCarousel();
+            }
         }
 
-        // Fonction pour l'image précédente
         function prevImage() {
             const project = projectsData[currentProjectId];
-            currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
-            updateGalleryImage();
-            // Redémarrer le carousel et la barre de progression
-            startCarousel();
+            if(project.images && project.images.length > 0) {
+                currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+                updateGalleryImage();
+                startCarousel();
+            }
         }
 
-        // Boutons de navigation de la galerie
         const galleryPrev = document.getElementById('galleryPrev');
         const galleryNext = document.getElementById('galleryNext');
 
-        if (galleryPrev) {
-            galleryPrev.addEventListener('click', () => {
-                prevImage();
-            });
-        }
+        if (galleryPrev) galleryPrev.addEventListener('click', prevImage);
+        if (galleryNext) galleryNext.addEventListener('click', nextImage);
 
-        if (galleryNext) {
-            galleryNext.addEventListener('click', () => {
-                nextImage();
-            });
-        }
-
-        // Fermer la modale
         function closeModal() {
             modal.classList.remove('active');
             document.body.style.overflow = '';
-            stopCarousel(); // Arrêter le carousel quand on ferme la modale
-            resetProgressBar(); // Réinitialiser la barre
+            stopCarousel();
+            resetProgressBar();
         }
 
         modalClose.addEventListener('click', closeModal);
         modalOverlay.addEventListener('click', closeModal);
 
-        // Fermer avec Échap
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeModal();
@@ -614,20 +487,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         }
 
-        if (mentionsClose) {
-            mentionsClose.addEventListener('click', closeMentionsModal);
-        }
+        if (mentionsClose) mentionsClose.addEventListener('click', closeMentionsModal);
+        if (mentionsOverlay) mentionsOverlay.addEventListener('click', closeMentionsModal);
 
-        if (mentionsOverlay) {
-            mentionsOverlay.addEventListener('click', closeMentionsModal);
-        }
-
-        // Fermer avec Échap
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && mentionsModal.classList.contains('active')) {
                 closeMentionsModal();
             }
         });
     }
-
-}); // Fin de DOMContentLoaded
+});

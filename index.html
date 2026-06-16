@@ -16,7 +16,7 @@
     />
     <meta property="og:type" content="website" />
 
-<link rel="icon" type="image/png" href="images/aso_logo.png" />
+    <link rel="icon" type="image/png" href="images/aso_logo.png" />
 
     <link
       rel="stylesheet"
@@ -48,6 +48,9 @@
           </li>
           <li>
             <a href="#apropos"><i class="fas fa-user"></i> À propos</a>
+          </li>
+          <li>
+            <a href="#competences-but"><i class="fas fa-graduation-cap"></i> Compétences BUT</a>
           </li>
           <li>
             <a href="#savoir-faire"><i class="fas fa-code"></i> Savoir-Faire</a>
@@ -100,17 +103,32 @@
       <div class="container">
         <h2 class="section-title">Mes Projets</h2>
 
-        <!-- Boutons de filtrage -->
         <div class="project-filters">
           <button class="filter-btn active" data-filter="tous">Tous</button>
+          <button class="filter-btn" data-filter="professionnel">Professionnel</button>
           <button class="filter-btn" data-filter="etudiant">Étudiant</button>
           <button class="filter-btn" data-filter="personnel">Personnel</button>
         </div>
 
-        <!-- Grille des projets -->
         <div class="projects-grid">
-          <!-- Projet 1 - Lyon Central -->
-          <div class="project-block" data-category="etudiant" data-project="0">
+          
+          <div class="project-block" data-category="professionnel" data-project="0">
+            <div class="project-block-image" style="background-color: #eee; height:200px; display:flex; align-items:center; justify-content:center;">
+              <img src="images/edf-stage.png" alt="Stage NetDevOps EDF" style="max-height: 100%; object-fit: cover; width: 100%;" />
+            </div>
+            <div class="project-block-content">
+              <h3>Stage NetDevOps & Audit - EDF</h3>
+              <div class="project-tech">
+                <span class="tech-tag">Python (Nornir)</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">Nautobot</span>
+                <span class="tech-tag">Confluence</span>
+              </div>
+              <button class="view-more-btn" style="margin-top: 15px;">Voir +</button>
+            </div>
+          </div>
+
+          <div class="project-block" data-category="etudiant" data-project="1">
             <div class="project-block-image">
               <img src="images/lyoncentral1.png" alt="Lyon Central" />
             </div>
@@ -125,8 +143,7 @@
             </div>
           </div>
 
-          <!-- Projet 2 - Lyon Lumière -->
-          <div class="project-block" data-category="etudiant" data-project="1">
+          <div class="project-block" data-category="etudiant" data-project="2">
             <div class="project-block-image">
               <img src="images/lyonlumiere.png" alt="Lyon Lumière" />
             </div>
@@ -141,8 +158,7 @@
             </div>
           </div>
 
-          <!-- Projet 3 - Elevator -->
-          <div class="project-block" data-category="etudiant" data-project="2">
+          <div class="project-block" data-category="etudiant" data-project="3">
             <div class="project-block-image">
               <img src="images/elevator.png" alt="Elevator Parking" />
             </div>
@@ -158,8 +174,7 @@
             </div>
           </div>
 
-          <!-- Projet 4 - Jeu d'Échecs -->
-          <div class="project-block" data-category="etudiant" data-project="3">
+          <div class="project-block" data-category="etudiant" data-project="4">
             <div class="project-block-image chess-placeholder">
               <i class="fas fa-chess chess-icon"></i>
             </div>
@@ -173,8 +188,7 @@
             </div>
           </div>
 
-          <!-- Projet 5 - Jeu 2048 -->
-          <div class="project-block" data-category="personnel" data-project="4">
+          <div class="project-block" data-category="personnel" data-project="5">
             <div class="project-block-image">
               <img src="images/2048_1.png" alt="Jeu 2048" />
             </div>
@@ -189,8 +203,7 @@
             </div>
           </div>
 
-          <!-- Projet 6 - Calculatrice -->
-          <div class="project-block" data-category="personnel" data-project="5">
+          <div class="project-block" data-category="personnel" data-project="6">
             <div class="project-block-image">
               <img src="images/cal1.png" alt="Calculatrice" />
             </div>
@@ -203,8 +216,7 @@
             </div>
           </div>
 
-          <!-- Projet 7 - Jeu du Pendu -->
-          <div class="project-block" data-category="personnel" data-project="6">
+          <div class="project-block" data-category="personnel" data-project="7">
             <div class="project-block-image">
               <img src="images/pednu1.png" alt="Jeu du Pendu" />
             </div>
@@ -217,8 +229,7 @@
             </div>
           </div>
 
-          <!-- Projet 8 - Paint Simple -->
-          <div class="project-block" data-category="personnel" data-project="7">
+          <div class="project-block" data-category="personnel" data-project="8">
             <div class="project-block-image">
               <img src="images/paint1.png" alt="Paint Simple" />
             </div>
@@ -232,8 +243,7 @@
             </div>
           </div>
 
-          <!-- Projet 9 - NexusFlow -->
-          <div class="project-block" data-category="personnel" data-project="8">
+          <div class="project-block" data-category="personnel" data-project="9">
             <div class="project-block-image">
               <img src="images/nexusflow.png" alt="NexusFlow" />
             </div>
@@ -247,8 +257,7 @@
             </div>
           </div>
 
-          <!-- Projet 10 - Jeu de Plateforme -->
-          <div class="project-block" data-category="personnel" data-project="9">
+          <div class="project-block" data-category="personnel" data-project="10">
             <div class="project-block-image">
               <img src="images/AP_1.png" alt="Jeu de Plateforme" />
             </div>
@@ -262,8 +271,7 @@
             </div>
           </div>
 
-          <!-- Projet 11 - Snake -->
-          <div class="project-block" data-category="personnel" data-project="10">
+          <div class="project-block" data-category="personnel" data-project="11">
             <div class="project-block-image">
               <img src="images/snake_1.png" alt="Snake" />
             </div>
@@ -277,8 +285,7 @@
             </div>
           </div>
 
-          <!-- Projet 12 - Morpion -->
-          <div class="project-block" data-category="personnel" data-project="11">
+          <div class="project-block" data-category="personnel" data-project="12">
             <div class="project-block-image">
               <img src="images/tictactoe_1.png" alt="Morpion" />
             </div>
@@ -292,8 +299,7 @@
             </div>
           </div>
 
-          <!-- Projet 13 - La Famille en Or -->
-          <div class="project-block" data-category="personnel" data-project="12">
+          <div class="project-block" data-category="personnel" data-project="13">
             <div class="project-block-image">
               <img src="images/feo1.png" alt="La Famille en Or" />
             </div>
@@ -307,11 +313,11 @@
               <button class="view-more-btn">Voir +</button>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Modale pour les détails du projet -->
     <div class="project-modal" id="projectModal">
       <div class="modal-overlay"></div>
       <div class="modal-content">
@@ -371,20 +377,97 @@
               comprendre, fondamentalement, "comment ça marche" ?
             </p>
             <p class="bio-paragraph">
-              Ce désir de maîtriser les mécanismes techniques s'est concrétisé
-              par un
-Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
-              BUT Informatique à l'IUT Lyon 1 Claude Bernard
+              Ce désir de maîtriser les mechanisms techniques s'est concrétisé
+              par un Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
+              BUT Informatique à l'IUT Lyon 1 Claude Bernard.
             </p>
-            <p class="bio-paragraph">
+<p class="bio-paragraph">
               Actuellement en 2ᵉ année, je mets cette curiosité au service de la
-              conception d'applications, du développement web et de
-              l'administration réseau. Loin de considérer l'apprentissage comme
-              une simple étape, il est le moteur de ma progression. Je m'engage
-              à continuer d'apprendre et de m'adapter, faisant de chaque
-              technologie et de chaque projet une opportunité d'étendre mes
-              savoir-faire pour construire les solutions de demain.
+              conception d'applications, du développement web et de l'administration réseau.
             </p>
+
+            <p class="bio-paragraph">
+              <strong>Mes passions :</strong> En dehors de l'informatique, je me passionne pour l'histoire, les échecs et l'évolution technologique. Ces centres d'intérêt m'ont forgé un esprit d'analyse stratégique et une grande curiosité pour comprendre "comment les choses marchent", des atouts que j'applique quotidiennement dans mon code.
+            </p>
+
+            <p class="bio-paragraph">
+              <strong>Mon bilan professionnel :</strong> Mon immersion au sein de la direction DIGIT d'EDF a été un véritable tremplin. Elle m'a permis de faire le pont entre la théorie académique et les contraintes de robustesse du monde industriel, et confirme mon souhait d'évoluer vers le <strong>NetDevOps</strong>.
+            </p>
+
+            <div style="margin-top: 25px;">
+              <a href="fichiers/CV_Ahmet_Selim_Ozsoy.pdf" target="_blank" class="view-more-btn" style="background-color: var(--dark); text-decoration: none;">
+                <i class="fas fa-file-pdf"></i> Voir mon CV
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences-but">
+      <div class="container">
+        <h2 class="section-title">Compétences BUT Informatique (Parcours RA)</h2>
+        <p class="skills-description">Mise en perspective de mes acquis académiques avec mes expériences professionnelles (Stage EDF) et universitaires (SAÉ).</p>
+        
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3><i class="fas fa-laptop-code"></i> Réaliser</h3>
+            <span class="level-tag">Niveau 2 atteint</span>
+            <p>Développer des applications informatiques simples et complexes.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>Projet EDF : Développement Python/Django de bout en bout et interfaçage avec des API REST.</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fas fa-tachometer-alt"></i> Optimiser</h3>
+            <span class="level-tag">Bientôt au niveau 2</span>
+            <p>Optimiser des applications informatiques et des algorithmes.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>SAÉ "Jeu d'Échecs" et "App Fête des Lumières" : Sélection des structures de données et optimisation des algorithmes de calcul.</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fas fa-network-wired"></i> Administrer</h3>
+            <span class="level-tag">Niveau 2 atteint</span>
+            <p>Administrer des infrastructures communicantes.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>Stage EDF : Compréhension des réseaux Data Center, configuration de routeurs Arista et gestion des ACL.</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fas fa-database"></i> Gérer</h3>
+            <span class="level-tag">Niveau 2 atteint</span>
+            <p>Gérer des données de l'information.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>Stage EDF : Interconnexion de mon script avec Nautobot (JSON) et restructuration documentaire de l'espace Confluence.</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fas fa-project-diagram"></i> Conduire</h3>
+            <span class="level-tag">Bientôt au niveau 2</span>
+            <p>Conduire un projet informatique.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>SAÉ "Lyon Central" et "NexusFlow" : Planification, gestion des tâches en méthode Agile et livraison au client.</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h3><i class="fas fa-users"></i> Collaborer</h3>
+            <span class="level-tag">Niveau 2 atteint</span>
+            <p>Travailler dans une équipe informatique.</p>
+            <div class="competence-link">
+              <strong>Validée par :</strong> 
+              <span>Stage EDF : Pilotage de l'audit avec les Product Owners et participation active aux rituels Agiles de l'équipe.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -566,13 +649,13 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
             >
               <i class="fab fa-github"></i> GitHub
             </a>
-            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <p>&copy; 2025 Ahmet-Selim Ozsoy. Tous droits réservés.</p>
+      <p>&copy; 2026 Ahmet-Selim Ozsoy. Tous droits réservés.</p>
       <p><i class="fas fa-envelope"></i> aselim6970@gmail.com</p>
       <p><a href="#" id="mentionsLegalesLink" class="mentions-link">Mentions légales</a></p>
     </footer>
@@ -581,7 +664,6 @@ Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Modale Mentions Légales -->
     <div class="mentions-modal" id="mentionsModal">
       <div class="modal-overlay"></div>
       <div class="mentions-content">
