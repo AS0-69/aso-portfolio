@@ -18,6 +18,13 @@
 
     <link rel="icon" type="image/png" href="images/aso_logo.png" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -113,11 +120,14 @@
         <div class="projects-grid">
           
           <div class="project-block" data-category="professionnel" data-project="0">
+            <span class="project-badge badge-professionnel">Professionnel</span>
             <div class="project-block-image" style="background-color: #eee; height:200px; display:flex; align-items:center; justify-content:center;">
               <img src="images/edf-stage.png" alt="Stage NetDevOps EDF" style="max-height: 100%; object-fit: cover; width: 100%;" />
             </div>
             <div class="project-block-content">
               <h3>Stage NetDevOps & Audit - EDF</h3>
+              <p class="project-desc">Automatisation réseau NetDevOps et refonte documentaire pour la direction DIGIT d'EDF.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Avril 2026 - Août 2026</span>
               <div class="project-tech">
                 <span class="tech-tag">Python (Nornir)</span>
                 <span class="tech-tag">Django</span>
@@ -129,11 +139,14 @@
           </div>
 
           <div class="project-block" data-category="etudiant" data-project="1">
+            <span class="project-badge badge-etudiant">Étudiant</span>
             <div class="project-block-image">
               <img src="images/lyoncentral1.png" alt="Lyon Central" />
             </div>
             <div class="project-block-content">
               <h3>Lyon Central</h3>
+              <p class="project-desc">Jeu de gestion d'urgences en temps réel inspiré de 911 Operator, avec carte interactive de Lyon.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Septembre 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Node.js</span>
                 <span class="tech-tag">Express.js</span>
@@ -144,11 +157,14 @@
           </div>
 
           <div class="project-block" data-category="etudiant" data-project="2">
+            <span class="project-badge badge-etudiant">Étudiant</span>
             <div class="project-block-image">
               <img src="images/lyonlumiere.png" alt="Lyon Lumière" />
             </div>
             <div class="project-block-content">
               <h3>Application de guidage – Fête des Lumières</h3>
+              <p class="project-desc">Application mobile de guidage pour la Fête des Lumières, reprenant le design system de TCL.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Février 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Swing</span>
                 <span class="tech-tag">Java</span>
@@ -159,11 +175,14 @@
           </div>
 
           <div class="project-block" data-category="etudiant" data-project="3">
+            <span class="project-badge badge-etudiant">Étudiant</span>
             <div class="project-block-image">
               <img src="images/elevator.png" alt="Elevator Parking" />
             </div>
             <div class="project-block-content">
               <h3>Ascenseur automatique pour parking miniature</h3>
+              <p class="project-desc">Parking automatisé miniature piloté par Arduino, avec interface web de monitoring en temps réel.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Mars 2024</span>
               <div class="project-tech">
                 <span class="tech-tag">C++</span>
                 <span class="tech-tag">PHP</span>
@@ -175,11 +194,14 @@
           </div>
 
           <div class="project-block" data-category="etudiant" data-project="4">
+            <span class="project-badge badge-etudiant">Étudiant</span>
             <div class="project-block-image chess-placeholder">
               <i class="fas fa-chess chess-icon"></i>
             </div>
             <div class="project-block-content">
               <h3>Jeu d'Échecs en Python</h3>
+              <p class="project-desc">Jeu d'échecs complet en Python, avec toutes les règles officielles et les coups spéciaux.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Novembre 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pygame</span>
@@ -189,11 +211,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="5">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/2048_1.png" alt="Jeu 2048" />
             </div>
             <div class="project-block-content">
               <h3>Jeu de puzzle 2048</h3>
+              <p class="project-desc">Implémentation moderne du puzzle 2048, avec sauvegarde du score et animations fluides.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Août 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">JavaScript</span>
@@ -204,11 +229,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="6">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/cal1.png" alt="Calculatrice" />
             </div>
             <div class="project-block-content">
               <h3>Calculatrice en Java</h3>
+              <p class="project-desc">Calculatrice Java pour les opérations arithmétiques de base.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Mai 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Java</span>
               </div>
@@ -217,11 +245,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="7">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/pednu1.png" alt="Jeu du Pendu" />
             </div>
             <div class="project-block-content">
               <h3>Jeu du Pendu en console</h3>
+              <p class="project-desc">Jeu du Pendu classique jouable dans le terminal, développé en C++.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Décembre 2023</span>
               <div class="project-tech">
                 <span class="tech-tag">C++</span>
               </div>
@@ -230,11 +261,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="8">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/paint1.png" alt="Paint Simple" />
             </div>
             <div class="project-block-content">
               <h3>Application de dessin simplifiée</h3>
+              <p class="project-desc">Clone simplifié de Microsoft Paint en Python avec Tkinter.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Juillet 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Tkinter</span>
@@ -244,11 +278,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="9">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/nexusflow.png" alt="NexusFlow" />
             </div>
             <div class="project-block-content">
               <h3>Site vitrine pour une start-up de communication digitale</h3>
+              <p class="project-desc">Site vitrine pour une start-up de production vidéo, réalisé sous WordPress et Figma.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Juin 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">WordPress</span>
                 <span class="tech-tag">Figma</span>
@@ -258,11 +295,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="10">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/AP_1.png" alt="Jeu de Plateforme" />
             </div>
             <div class="project-block-content">
               <h3>Jeu de plateforme 2D</h3>
+              <p class="project-desc">Jeu de plateforme 2D avec Pygame, à travers plusieurs niveaux et obstacles.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Décembre 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pygame</span>
@@ -272,11 +312,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="11">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/snake_1.png" alt="Snake" />
             </div>
             <div class="project-block-content">
               <h3>Jeu du Snake classique</h3>
+              <p class="project-desc">Réimplémentation du jeu Snake classique avec Pygame.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Juillet 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pygame</span>
@@ -286,11 +329,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="12">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/tictactoe_1.png" alt="Morpion" />
             </div>
             <div class="project-block-content">
               <h3>Jeu de Morpion (Tic-Tac-Toe)</h3>
+              <p class="project-desc">Jeu de Morpion en C# avec interface graphique Windows Forms.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Juillet 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">C#</span>
                 <span class="tech-tag">.NET</span>
@@ -300,11 +346,14 @@
           </div>
 
           <div class="project-block" data-category="personnel" data-project="13">
+            <span class="project-badge badge-personnel">Personnel</span>
             <div class="project-block-image">
               <img src="images/feo1.png" alt="La Famille en Or" />
             </div>
             <div class="project-block-content">
               <h3>Jeu La Famille en Or</h3>
+              <p class="project-desc">Reproduction interactive du jeu télévisé, développée pour des événements communautaires.</p>
+              <span class="project-date"><i class="far fa-calendar"></i> Décembre 2025</span>
               <div class="project-tech">
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">CSS</span>
@@ -362,12 +411,12 @@
       <div class="container">
         <h2 class="section-title">À propos</h2>
 
-        <div class="bio-content">
+        <div class="bio-intro">
           <div class="bio-image">
             <img src="images/coding_hand.png" alt="Illustration de code abstrait" />
           </div>
 
-          <div class="bio-text">
+          <div class="bio-lead">
             <p>
               Mon engagement envers l'informatique prend racine dans une
               profonde fascination pour l'évolution humaine et l'histoire. L'ère
@@ -376,28 +425,75 @@
               Cette démarche est née d'une simple curiosité d'enfant : celle de
               comprendre, fondamentalement, "comment ça marche" ?
             </p>
-            <p class="bio-paragraph">
-              Ce désir de maîtriser les mechanisms techniques s'est concrétisé
-              par un Baccalauréat STI2D Mention Bien, un socle solide qui m'a mené directement au
-              BUT Informatique à l'IUT Lyon 1 Claude Bernard.
-            </p>
-<p class="bio-paragraph">
-              Actuellement en 2ᵉ année, je mets cette curiosité au service de la
-              conception d'applications, du développement web et de l'administration réseau.
-            </p>
+            <a href="fichiers/CV_Ahmet_Selim_Ozsoy.pdf" target="_blank" class="view-more-btn cv-btn">
+              <i class="fas fa-file-pdf"></i> Voir mon CV
+            </a>
+          </div>
+        </div>
 
-            <p class="bio-paragraph">
-              <strong>Mes passions :</strong> En dehors de l'informatique, je me passionne pour l'histoire, les échecs et l'évolution technologique. Ces centres d'intérêt m'ont forgé un esprit d'analyse stratégique et une grande curiosité pour comprendre "comment les choses marchent", des atouts que j'applique quotidiennement dans mon code.
-            </p>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="process-step-index">01</span>
+            <div class="process-step-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="process-step-body">
+              <h3>Formation</h3>
+              <p>
+                Ce désir de maîtriser les mécanismes techniques s'est concrétisé
+                par un Baccalauréat STI2D mention Bien, un socle solide qui m'a
+                mené directement au BUT Informatique à l'IUT Lyon 1 Claude
+                Bernard.
+              </p>
+            </div>
+          </div>
 
-            <p class="bio-paragraph">
-              <strong>Mon bilan professionnel :</strong> Mon immersion au sein de la direction DIGIT d'EDF a été un véritable tremplin. Elle m'a permis de faire le pont entre la théorie académique et les contraintes de robustesse du monde industriel, et confirme mon souhait d'évoluer vers le <strong>NetDevOps</strong>.
-            </p>
+          <div class="process-step">
+            <span class="process-step-index">02</span>
+            <div class="process-step-marker">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="process-step-body">
+              <h3>Aujourd'hui</h3>
+              <p>
+                Actuellement en 2ᵉ année, je mets cette curiosité au service de
+                la conception d'applications, du développement web et de
+                l'administration réseau.
+              </p>
+            </div>
+          </div>
 
-            <div style="margin-top: 25px;">
-              <a href="fichiers/CV_Ahmet_Selim_Ozsoy.pdf" target="_blank" class="view-more-btn" style="background-color: var(--dark); text-decoration: none;">
-                <i class="fas fa-file-pdf"></i> Voir mon CV
-              </a>
+          <div class="process-step">
+            <span class="process-step-index">03</span>
+            <div class="process-step-marker">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="process-step-body">
+              <h3>Expérience terrain</h3>
+              <p>
+                Mon immersion au sein de la direction DIGIT d'EDF a été un
+                véritable tremplin. Elle m'a permis de faire le pont entre la
+                théorie académique et les contraintes de robustesse du monde
+                industriel, et confirme mon souhait d'évoluer vers le
+                <strong>NetDevOps</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <span class="process-step-index">04</span>
+            <div class="process-step-marker">
+              <i class="fas fa-chess-knight"></i>
+            </div>
+            <div class="process-step-body">
+              <h3>Passions</h3>
+              <p>
+                En dehors de l'informatique, je me passionne pour l'histoire,
+                les échecs et l'évolution technologique. Ces centres d'intérêt
+                m'ont forgé un esprit d'analyse stratégique et une grande
+                curiosité pour comprendre "comment les choses marchent", des
+                atouts que j'applique quotidiennement dans mon code.
+              </p>
             </div>
           </div>
         </div>
@@ -408,65 +504,137 @@
       <div class="container">
         <h2 class="section-title">Compétences BUT Informatique (Parcours RA)</h2>
         <p class="skills-description">Mise en perspective de mes acquis académiques avec mes expériences professionnelles (Stage EDF) et universitaires (SAÉ).</p>
-        
-        <div class="skills-grid">
-          <div class="skill-card">
+
+        <div class="competences-panel">
+          <div class="competences-bars">
+            <div class="progress-item" data-percent="85">
+              <div class="progress-item-head">
+                <span><i class="fas fa-laptop-code"></i> Réaliser</span>
+                <span class="progress-value">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="progress-item" data-percent="65">
+              <div class="progress-item-head">
+                <span><i class="fas fa-tachometer-alt"></i> Optimiser</span>
+                <span class="progress-value">65%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="progress-item" data-percent="85">
+              <div class="progress-item-head">
+                <span><i class="fas fa-network-wired"></i> Administrer</span>
+                <span class="progress-value">85%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="progress-item" data-percent="80">
+              <div class="progress-item-head">
+                <span><i class="fas fa-database"></i> Gérer</span>
+                <span class="progress-value">80%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="progress-item" data-percent="60">
+              <div class="progress-item-head">
+                <span><i class="fas fa-project-diagram"></i> Conduire</span>
+                <span class="progress-value">60%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+
+            <div class="progress-item" data-percent="90">
+              <div class="progress-item-head">
+                <span><i class="fas fa-users"></i> Collaborer</span>
+                <span class="progress-value">90%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="competences-radar">
+            <canvas id="competencesRadarChart" role="img" aria-label="Radar des 6 compétences BUT, niveau actuel et objectif visé"></canvas>
+            <div class="radar-legend">
+              <span><i class="legend-dot legend-dot-current"></i> Niveau actuel</span>
+              <span><i class="legend-dot legend-dot-target"></i> Objectif fin de BUT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="comp-details-grid">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-laptop-code"></i> Réaliser</h3>
             <span class="level-tag">Niveau 2 atteint</span>
             <p>Développer des applications informatiques simples et complexes.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
+              <strong>Validée par :</strong>
               <span>Projet EDF : Développement Python/Django de bout en bout et interfaçage avec des API REST.</span>
             </div>
           </div>
 
-          <div class="skill-card">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-tachometer-alt"></i> Optimiser</h3>
-            <span class="level-tag">Bientôt au niveau 2</span>
+            <span class="level-tag pending">Bientôt au niveau 2</span>
             <p>Optimiser des applications informatiques et des algorithmes.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
-              <span>SAÉ "Jeu d'Échecs" et "App Fête des Lumières" : Sélection des structures de données et optimisation des algorithmes de calcul.</span>
+              <strong>Validée par :</strong>
+              <span>SAÉ "Jeu d'Échecs" et "App Fête des Lumières" : sélection des structures de données et optimisation des algorithmes de calcul.</span>
             </div>
           </div>
 
-          <div class="skill-card">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-network-wired"></i> Administrer</h3>
             <span class="level-tag">Niveau 2 atteint</span>
             <p>Administrer des infrastructures communicantes.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
-              <span>Stage EDF : Compréhension des réseaux Data Center, configuration de routeurs Arista et gestion des ACL.</span>
+              <strong>Validée par :</strong>
+              <span>Stage EDF : compréhension des réseaux Data Center, configuration de routeurs Arista et gestion des ACL.</span>
             </div>
           </div>
 
-          <div class="skill-card">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-database"></i> Gérer</h3>
             <span class="level-tag">Niveau 2 atteint</span>
             <p>Gérer des données de l'information.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
-              <span>Stage EDF : Interconnexion de mon script avec Nautobot (JSON) et restructuration documentaire de l'espace Confluence.</span>
+              <strong>Validée par :</strong>
+              <span>Stage EDF : interconnexion de mon script avec Nautobot (JSON) et restructuration documentaire de l'espace Confluence.</span>
             </div>
           </div>
 
-          <div class="skill-card">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-project-diagram"></i> Conduire</h3>
-            <span class="level-tag">Bientôt au niveau 2</span>
+            <span class="level-tag pending">Bientôt au niveau 2</span>
             <p>Conduire un projet informatique.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
-              <span>SAÉ "Lyon Central" et "NexusFlow" : Planification, gestion des tâches en méthode Agile et livraison au client.</span>
+              <strong>Validée par :</strong>
+              <span>SAÉ "Lyon Central" et "NexusFlow" : planification, gestion des tâches en méthode Agile et livraison au client.</span>
             </div>
           </div>
 
-          <div class="skill-card">
+          <div class="comp-detail-card">
             <h3><i class="fas fa-users"></i> Collaborer</h3>
             <span class="level-tag">Niveau 2 atteint</span>
             <p>Travailler dans une équipe informatique.</p>
             <div class="competence-link">
-              <strong>Validée par :</strong> 
-              <span>Stage EDF : Pilotage de l'audit avec les Product Owners et participation active aux rituels Agiles de l'équipe.</span>
+              <strong>Validée par :</strong>
+              <span>Stage EDF : pilotage de l'audit avec les Product Owners et participation active aux rituels Agiles de l'équipe.</span>
             </div>
           </div>
         </div>
@@ -705,6 +873,7 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.skill-card').forEach(card => {
+    document.querySelectorAll('.skill-card, .comp-detail-card').forEach(card => {
         observer.observe(card);
     });
 
@@ -105,6 +105,119 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 themeIcon.className = 'fas fa-moon';
             }
+        }
+    }
+
+    /* ============================================= */
+    /* Barres de progression (Compétences)          */
+    /* ============================================= */
+    const progressItems = document.querySelectorAll('.progress-item');
+
+    if (progressItems.length > 0) {
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = entry.target.querySelector('.progress-fill');
+                    const percent = entry.target.getAttribute('data-percent');
+                    if (fill) {
+                        fill.style.width = percent + '%';
+                    }
+                    progressObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        progressItems.forEach(item => progressObserver.observe(item));
+    }
+
+    /* ============================================= */
+    /* Radar Chart (Compétences BUT)                */
+    /* ============================================= */
+    const radarCanvas = document.getElementById('competencesRadarChart');
+
+    if (radarCanvas && typeof Chart !== 'undefined') {
+        const radarLabels = ['Réaliser', 'Optimiser', 'Administrer', 'Gérer', 'Conduire', 'Collaborer'];
+        const currentLevels = [85, 65, 85, 80, 60, 90];
+        const targetLevels = [95, 85, 95, 90, 85, 100];
+
+        function getThemeColors() {
+            const styles = getComputedStyle(document.documentElement);
+            return {
+                text: styles.getPropertyValue('--text-main').trim() || '#333',
+                gray: styles.getPropertyValue('--gray').trim() || '#6b7280',
+                primary: styles.getPropertyValue('--primary').trim() || '#7c3aed'
+            };
+        }
+
+        let radarChart = null;
+
+        function buildRadarChart() {
+            const colors = getThemeColors();
+
+            if (radarChart) {
+                radarChart.destroy();
+            }
+
+            radarChart = new Chart(radarCanvas, {
+                type: 'radar',
+                data: {
+                    labels: radarLabels,
+                    datasets: [
+                        {
+                            label: 'Niveau actuel',
+                            data: currentLevels,
+                            backgroundColor: 'rgba(124, 58, 237, 0.25)',
+                            borderColor: colors.primary,
+                            borderWidth: 2,
+                            pointBackgroundColor: colors.primary,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Objectif fin de BUT',
+                            data: targetLevels,
+                            backgroundColor: 'rgba(196, 181, 253, 0.15)',
+                            borderColor: '#c4b5fd',
+                            borderWidth: 2,
+                            borderDash: [4, 4],
+                            pointBackgroundColor: '#c4b5fd',
+                            pointRadius: 3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        r: {
+                            min: 0,
+                            max: 100,
+                            ticks: {
+                                display: false,
+                                stepSize: 25
+                            },
+                            grid: { color: colors.gray + '33' },
+                            angleLines: { color: colors.gray + '33' },
+                            pointLabels: {
+                                color: colors.text,
+                                font: { size: 11, weight: '600' }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        buildRadarChart();
+
+        // Recharge les couleurs du graphique au changement de thème
+        const radarThemeToggle = document.getElementById('themeToggle');
+        if (radarThemeToggle) {
+            radarThemeToggle.addEventListener('click', () => {
+                setTimeout(buildRadarChart, 50);
+            });
         }
     }
 
